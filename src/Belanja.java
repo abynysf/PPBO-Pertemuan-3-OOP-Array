@@ -12,20 +12,14 @@ public class Belanja {
         this.uangDina = uangDina;
     }
 
-    // Method dibawah ini
-    public void TambahBelanja(String barang) {
-        daftarBelanjaan = new ArrayList<>();
-        daftarBelanjaan.add(barang);
-        barangDibeli = new ArrayList<>();
-    }
-
+    // Method dibawah ini akan memasukkan barang dari main ke dalam list
     public void DaftarBelanja(String barang) {
         if (daftarBelanjaan == null) {
             daftarBelanjaan = new ArrayList<>();
         }
         daftarBelanjaan.add(barang);
     }
-
+    // Daftar belanja "cabai" yang telah ditetapkan di awal akan diganti menjadi "ayam" dan "minyak"
     public void DaftarYangDibeli() {
         barangDibeli = new ArrayList<>();
         for (String barang : daftarBelanjaan) {
@@ -38,6 +32,7 @@ public class Belanja {
         }
     }
 
+    // Method dibawah ini digunakan untuk menghitung total harga barang yang akan dibeli
     public void hitungTotalBelanja() {
         totalBelanja = 0;
         int hargaCabai = 3000;
@@ -75,6 +70,7 @@ public class Belanja {
         }
     }
 
+    // Mehtod di bawah ini digunakan untuk menampilkan daftar belanja awal
     public void tampilkanDaftarBelanjaan() {
         System.out.println("Daftar Belanjaan:");
         for (String barang : daftarBelanjaan) {
@@ -82,6 +78,7 @@ public class Belanja {
         }
     }
 
+    // Mehtod di bawah ini digunakan untuk menampilkan daftar yang akan dibeli
     public void tampilkanBarangDibeli() {
         System.out.println("\nBarang yang dibeli:");
         for (String barang : barangDibeli) {
@@ -89,6 +86,7 @@ public class Belanja {
         }
     }
 
+    // Mehtod di bawah ini digunakan untuk menampilkan total harga yang keterangan apakah uang Dina cukup atau tidak
     public void tampilkanTotalBelanja() {
         hitungTotalBelanja();
         System.out.println("\nTotal belanja: Rp " + totalBelanja);
